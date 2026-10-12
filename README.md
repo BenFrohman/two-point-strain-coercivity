@@ -17,7 +17,7 @@ This is a Zenodo-ready source package. It is not a proof of global regularity.
 | `two_point_strain_coercivity.md` | Markdown source of the same note |
 | `two_point_strain_coercivity.pdf` | Compile locally with `pdflatex` |
 | `ZENODO.md` | Deposit instructions |
-| `LICENSE.txt` | CC-BY 4.0 |
+| `LICENSE` | Apache-2.0 |
 
 ## Compile
 
@@ -42,7 +42,9 @@ I, Benjamin Stanley Frohman, take responsibility for this note. The equation is 
 
 ## License
 
-CC-BY 4.0. Cite the Zenodo DOI once issued.
+Apache License, Version 2.0. See LICENSE and NOTICE.
+Copies already received under CC BY 4.0 keep that grant.
+No Zenodo DOI is recorded in this repository. A later deposit is a separate copy.
 
 ## Suggested citation
 

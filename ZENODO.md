@@ -17,7 +17,7 @@ Two-Point Strain Coercivity Is Not Free: The Intermediate-Axis Counterexample an
 - Publication date: 2026-09-11
 - Authors: Frohman, Benjamin Stanley
 - Affiliation: independent, Prosper, Texas, United States
-- License: Creative Commons Attribution 4.0 International
+- License: Apache License, Version 2.0
 - Keywords: Navier–Stokes, vorticity direction, Constantin–Fefferman, strain, geometric depletion, Calderón–Zygmund
 - Language: English
 - Related identifiers: Constantin–Fefferman, Indiana Univ. Math. J. 42 (1993), 775–789

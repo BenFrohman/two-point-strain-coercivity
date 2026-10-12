@@ -9,7 +9,7 @@ authors:
     website: "https://github.com/BenFrohman"
 version: "2026-09-11-draft"
 date-released: "2026-09-11"
-license: "CC-BY-4.0"
+license: "Apache-2.0"
 repository-code: "https://github.com/BenFrohman/two-point-strain-coercivity"
 keywords:
   - "Navier-Stokes equations"
