@@ -4,7 +4,9 @@
 **Affiliation:** Independent Researcher  
 **Date:** September 25, 2026  
 **MSC 2020:** 35Q30 (Primary), 76D03, 76D05 (Secondary)  
-**License:** Apache-2.0
+**Copyright:** Copyright (c) 2026 Benjamin Stanley Frohman  
+**License:** Apache License, Version 2.0 (`Apache-2.0`)  
+**Zenodo DOI:** [10.5281/zenodo.23627618](https://doi.org/10.5281/zenodo.23627618)
 
 ---
 

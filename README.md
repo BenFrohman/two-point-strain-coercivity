@@ -46,7 +46,7 @@ I, Benjamin Stanley Frohman, take responsibility for this note. The equation is 
 
 ## License
 
-Apache License, Version 2.0. See LICENSE and NOTICE.
+Copyright (c) 2026 Benjamin Stanley Frohman. Licensed under the Apache License, Version 2.0 (`LICENSE`, `NOTICE`).
 Copies already received under CC BY 4.0 keep that grant.
 Zenodo DOI: [`10.5281/zenodo.23627618`](https://doi.org/10.5281/zenodo.23627618).
 
