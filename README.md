@@ -1,9 +1,12 @@
 <!-- Copyright (c) 2026 Benjamin Stanley Frohman. Licensed under Apache-2.0. -->
 # Two-Point Strain Coercivity Is Not Free
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23627618.svg)](https://doi.org/10.5281/zenodo.23627618)
+
 **Author:** Benjamin Stanley Frohman  
 **Date:** 11 September 2026  
-**Repository:** https://github.com/BenFrohman/two-point-strain-coercivity
+**Repository:** https://github.com/BenFrohman/two-point-strain-coercivity  
+**Zenodo DOI:** [`10.5281/zenodo.23627618`](https://doi.org/10.5281/zenodo.23627618)
 
 **Claim, stated directly:** The two-point pairing that would convert Constantin–Fefferman from a hypothesis into a theorem is false at kinematic strength. The Biot–Savart estimate along unmodified Navier–Stokes, without a Lipschitz bound on the vorticity direction, ends at \(C_{\mathrm{CZ}}M\), not at an \(M\)-independent \(-\gamma\).
 
@@ -45,7 +48,7 @@ I, Benjamin Stanley Frohman, take responsibility for this note. The equation is 
 
 Apache License, Version 2.0. See LICENSE and NOTICE.
 Copies already received under CC BY 4.0 keep that grant.
-No Zenodo DOI is recorded in this repository. A later deposit is a separate copy.
+Zenodo DOI: [`10.5281/zenodo.23627618`](https://doi.org/10.5281/zenodo.23627618).
 
 ## Suggested citation
 
