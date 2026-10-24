@@ -1,23 +1,19 @@
 cff-version: 1.2.0
-message: "If you use or reference this work, please cite it as below."
-title: "Two-Point Strain Coercivity Is Not Free"
-type: article
+title: "On Local Two-Point Strain Coercivity in the 3D Vorticity Equation"
+message: "If you refer to this note, please cite it using the metadata below."
+type: software
 authors:
   - family-names: "Frohman"
     given-names: "Benjamin Stanley"
-    alias: "X.com : Investor0x"
-    website: "https://github.com/BenFrohman"
-version: "2026-09-11-draft"
-date-released: "2026-09-11"
+    orcid: "https://orcid.org/0009-0006-7068-3718"
 license: "Apache-2.0"
 repository-code: "https://github.com/BenFrohman/two-point-strain-coercivity"
+url: "https://github.com/BenFrohman/two-point-strain-coercivity"
+version: "1.0.0"
+date-released: "2026-09-25"
 keywords:
-  - "Navier-Stokes equations"
-  - "strain coercivity"
-  - "Calderon-Zygmund"
-  - "two-point strain"
-  - "intermediate-axis counterexample"
-abstract: >-
-  Draft note: two-point strain coercivity is not free. Intermediate-axis
-  counterexample and the Calderon-Zygmund remainder C_CZ ||omega||_infty
-  for unmodified 3D Navier-Stokes. Author: Benjamin Stanley Frohman.
+  - "Navier-Stokes"
+  - "vorticity stretching"
+  - "Constantin-Fefferman"
+  - "two-point kernel"
+  - "strain eigenvalues"

@@ -1,32 +1,21 @@
-<!-- Copyright (c) 2026 Benjamin Stanley Frohman. Licensed under Apache-2.0. -->
-# Zenodo deposit
+# Zenodo Deposit Cheat-Sheet
 
-## Title to paste into the Zenodo form
+Mint the DOI by uploading `two_point_strain_coercivity.pdf`, `two_point_strain_coercivity.tex`, `two_point_strain_coercivity.md`, `LICENSE`, `NOTICE`, and `CITATION.cff` to <https://zenodo.org/deposit/new> (or via the GitHub → Zenodo webhook).
 
-Two-Point Strain Coercivity Is Not Free: The Intermediate-Axis Counterexample and the Calderón–Zygmund Remainder C_CZ ||ω||_∞ for Unmodified Three-Dimensional Navier–Stokes
+| Field | Value |
+|---|---|
+| **Upload type** | Publication → Preprint |
+| **Title** | On Local Two-Point Strain Coercivity in the 3D Vorticity Equation |
+| **Creator** | Frohman, Benjamin Stanley (ORCID: `0009-0006-7068-3718`, Independent Researcher) |
+| **License** | Apache License 2.0 (`Apache-2.0`) |
+| **Version** | `1.0.0` |
+| **Subjects / Keywords** | `35Q30`, `76D03`, `Navier-Stokes`, `vorticity stretching`, `Constantin-Fefferman`, `two-point kernel` |
+| **Description** | Short note showing that a conjectured local two-point strain coercivity inequality for the 3D vorticity equation fails for general smooth divergence-free fields on T^3, and that the Biot–Savart / Calderón–Zygmund closure without Lipschitz control of the direction field yields a positive right-hand side `C_* = C_CZ * M` rather than `-gamma`. |
 
-## Upload these files
+After Zenodo mints `10.5281/zenodo.<RECORD_ID>`:
 
-- two_point_strain_coercivity.pdf (compile from the .tex)
-- two_point_strain_coercivity.tex
-- two_point_strain_coercivity.md
-- README.md
-
-## Metadata
-
-- Upload type: Publication / Working paper
-- Publication date: 2026-09-11
-- Authors: Frohman, Benjamin Stanley
-- Affiliation: independent, Prosper, Texas, United States
-- License: Apache License, Version 2.0
-- Keywords: Navier–Stokes, vorticity direction, Constantin–Fefferman, strain, geometric depletion, Calderón–Zygmund
-- Language: English
-- Related identifiers: Constantin–Fefferman, Indiana Univ. Math. J. 42 (1993), 775–789
-
-## Description to paste
-
-The two-point pairing that would convert the Constantin–Fefferman direction criterion from a hypothesis into a theorem is written as an explicit inequality on unmodified strain. That inequality is false at kinematic strength. The counterexample is intermediate-axis alignment of vorticity with a slow tilt toward the principal stretching axis. The same pairing, estimated along unmodified Navier–Stokes by Biot–Savart without a Lipschitz bound on the vorticity direction, terminates at a remainder of size C_CZ M, not at an M-independent coercive constant −γ. Replacing C_CZ M by −γ, uniformly in M = ||ω||_∞, is the regularity problem. This note does not claim a proof of global regularity.
-
-## After deposit
-
-Record the DOI on README.md and on this repository. Version the deposit if the Strength B last line is sharpened.
+1. Replace the placeholder badge in `README.md` with:
+   ```markdown
+   [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.<RECORD_ID>.svg)](https://doi.org/10.5281/zenodo.<RECORD_ID>)
+   ```
+2. Uncomment and fill `doi: "10.5281/zenodo.<RECORD_ID>"` in `CITATION.cff`.

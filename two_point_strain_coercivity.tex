@@ -1,0 +1,153 @@
+% Copyright (c) 2026 Benjamin Stanley Frohman. All rights reserved.
+% Released under Apache 2.0 license as described in the file LICENSE.
+% Authors: Benjamin Stanley Frohman
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\usepackage[margin=1.15in]{geometry}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\theoremstyle{definition}
+\newtheorem{conjecture}{Candidate Inequality}
+
+\title[On Local Two-Point Strain Coercivity in the 3D Vorticity Equation]{On Local Two-Point Strain Coercivity in the 3D Vorticity Equation}
+\author{Benjamin Stanley Frohman}
+\address{Independent Researcher \\ ORCID: 0009-0006-7068-3718}
+\email{frohmanbenjamin@gmail.com}
+\date{September 25, 2026}
+\subjclass[2020]{Primary 35Q30; Secondary 76D03, 76D05}
+\keywords{Navier--Stokes equations, vorticity stretching, Constantin--Fefferman direction criterion, two-point kernel, strain eigenvalues, Biot--Savart law}
+
+\begin{document}
+
+\begin{abstract}
+We analyze a candidate local two-point strain-dissipation coercivity inequality for the three-dimensional incompressible Navier--Stokes vorticity equation on $\mathbb{T}^3$. First (\textbf{Theorem~A}), we prove that the conjectured local two-point coercivity bound $(\star)_\rho$ fails as a kinematic identity across smooth divergence-free velocity fields on $\mathbb{T}^3$: by aligning the vorticity at $x_0$ with the intermediate strain eigenvector $e_2$ ($0<\lambda_2\ll \lambda_1$) and tilting the vorticity direction across $|x-x_0|\le\rho$ toward the principal stretching eigenvector $e_1$, the local two-point directional dissipation $\mathcal{D}_\rho(x_0)$ is made arbitrarily small relative to the stretching rate $\mathcal{S}(x_0)$ while keeping $\|\nabla\xi\|_{L^\infty}\lesssim\rho^{-1}$. Second (\textbf{Theorem~B}), we audit the singular-integral Biot--Savart / Calder\'on--Zygmund closure when no \emph{a priori} Lipschitz bound on the vorticity direction field $\xi=\omega/|\omega|$ is assumed: after absorbing the directional increment into the local two-point integral, the leading coefficient on the right-hand side is the positive quantity $C_*=C_{\mathrm{CZ}}M$ rather than a negative damping constant $-\gamma$. Finally, we record the behavior of uncutoff two-point directional integrals on exact two-dimensional shear flows.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction and Candidate Coercivity Inequality}
+
+Let $u:\mathbb{T}^3\times[0,T)\to\mathbb{R}^3$ be a smooth solution of the three-dimensional incompressible Navier--Stokes equations with vorticity $\omega=\nabla\times u$ and symmetric rate-of-strain tensor $S=\tfrac{1}{2}(\nabla u+(\nabla u)^T)$. Since $\operatorname{div}u=0$, the eigenvalues $\lambda_1(x)\ge\lambda_2(x)\ge\lambda_3(x)$ of $S(x)$ satisfy
+\[
+  \lambda_1(x)+\lambda_2(x)+\lambda_3(x)=0.
+\]
+On the non-nodal set $\{x:\omega(x)\neq 0\}$, let $\xi(x)=\omega(x)/|\omega(x)|\in\mathbb{S}^2$ denote the vorticity direction field. The pointwise vortex-stretching quadratic form is
+\[
+  \mathcal{S}(x)=(S(x)\omega(x))\cdot\omega(x)=|\omega(x)|^2\,(S(x)\xi(x))\cdot\xi(x).
+\]
+For a localization scale $\rho>0$, define the local two-point directional dissipation functional
+\[
+  \mathcal{D}_\rho(x)=|\omega(x)|^2\int_{|x-y|\le\rho}\frac{|\xi(x)-\xi(y)|^2}{|x-y|^3}\,dy.
+\]
+A natural question in the spirit of Constantin--Fefferman~\cite{CF93} is whether the singular integral representation of $S(x)$ forces a local two-point coercivity bound without assuming an \emph{a priori} Lipschitz or H\"older bound on $\xi$:
+
+\begin{conjecture}[$(\star)_\rho$]
+There exist universal constants $\gamma>0$, $C_0\ge 0$, and $\rho>0$ such that for every smooth divergence-free velocity field $u$ on $\mathbb{T}^3$ and every $x\in\mathbb{T}^3$,
+\begin{equation}\label{eq:star-rho}
+  \mathcal{S}(x)-\nu\,\mathcal{D}_\rho(x)\;\le\;-\gamma\,\mathcal{D}_\rho(x)+C_0\,|\omega(x)|^2.
+  \tag{$\star_\rho$}
+\end{equation}
+\end{conjecture}
+
+The purpose of this note is to record two negative results showing why \eqref{eq:star-rho} cannot hold unconditionally and why the standard Biot--Savart singular-integral absorption produces the opposite sign on the leading term.
+
+\section{Theorem A: Kinematic Counterexample via Intermediate-Axis Alignment}
+
+\begin{theorem}[Theorem A]\label{thm:A}
+For every $\rho>0$, $\nu>0$, $\gamma>0$, and $C_0\ge 0$, the inequality \eqref{eq:star-rho} fails on smooth divergence-free velocity fields on $\mathbb{T}^3$. Specifically, for any $\Lambda>0$ and $\delta\in(0,1/2)$, there exist a smooth divergence-free velocity field $u$ on $\mathbb{T}^3$ and a point $x_0\in\mathbb{T}^3$ such that:
+\begin{enumerate}
+  \item The strain tensor $S(x_0)$ is diagonal in the standard frame $(e_1,e_2,e_3)$ with eigenvalues
+  \[
+    \lambda_1(x_0)=\Lambda,\qquad \lambda_2(x_0)=\delta\Lambda>0,\qquad \lambda_3(x_0)=-(1+\delta)\Lambda.
+  \]
+  \item At $x_0$, the vorticity direction is $\xi(x_0)=e_2$, so the stretching rate is positive:
+  \[
+    \mathcal{S}(x_0)=\delta\Lambda\,|\omega(x_0)|^2>0.
+  \]
+  \item On the ball $|x-x_0|\le\rho$, the vorticity direction tilts smoothly in the $(e_1,e_2)$-plane as a function of $x_3$ alone,
+  \[
+    \xi(x)=\sin\!\left(\frac{\varepsilon(x_3-x_{0,3})}{\rho}\right)e_1+\cos\!\left(\frac{\varepsilon(x_3-x_{0,3})}{\rho}\right)e_2,
+  \]
+  with $\varepsilon\in(0,1)$, so that $\|\nabla\xi\|_{L^\infty(B_\rho(x_0))}\le\varepsilon/\rho$ and
+  \[
+    \mathcal{D}_\rho(x_0)\;\le\;\frac{4\pi}{3}\,\varepsilon^2\,|\omega(x_0)|^2.
+  \]
+\end{enumerate}
+In particular, choosing $\varepsilon^2\ll \delta\Lambda/(\nu+\gamma)$ and $\delta\Lambda>2C_0$ yields
+\[
+  \mathcal{S}(x_0)-\nu\,\mathcal{D}_\rho(x_0)\;>\;-\gamma\,\mathcal{D}_\rho(x_0)+C_0\,|\omega(x_0)|^2.
+\]
+\end{theorem}
+
+\begin{proof}
+Work in local coordinates centered at $x_0=0$ on $\mathbb{T}^3$ with $\rho<\tfrac{1}{4}$. For any constant amplitude $\Omega_0>0$, the vector field
+\[
+  \widetilde{\omega}(x)=\Omega_0\left(\sin\!\left(\frac{\varepsilon x_3}{\rho}\right)e_1+\cos\!\left(\frac{\varepsilon x_3}{\rho}\right)e_2\right)
+\]
+is smooth and identically divergence-free on $B_{2\rho}(0)$ because its components depend only on $x_3$ and its third component vanishes. At $x=0$, $\widetilde{\omega}(0)=\Omega_0 e_2$. Meanwhile, the quadratic harmonic polynomial
+\[
+  \phi(x)=\frac{\Lambda}{2}x_1^2+\frac{\delta\Lambda}{2}x_2^2-\frac{(1+\delta)\Lambda}{2}x_3^2
+\]
+satisfies $\Delta\phi=0$, so $v(x)=\nabla\phi(x)$ is divergence-free and irrotational ($\nabla\times v=0$) with symmetric gradient $\nabla^2\phi(0)=\operatorname{diag}(\Lambda,\delta\Lambda,-(1+\delta)\Lambda)$.
+
+Using a smooth radial cutoff $\chi\in C_c^\infty(B_{2\rho}(0))$ with $\chi\equiv 1$ on $B_\rho(0)$ and solving the periodic Bogovskii / vector-potential extension on $\mathbb{T}^3$, one obtains a global smooth divergence-free field $u$ on $\mathbb{T}^3$ whose vorticity on $B_\rho(0)$ equals $\widetilde{\omega}(x)$ and whose strain at $0$ equals $S(0)=\nabla^2\phi(0)+S_{\widetilde{\omega}}(0)$. Choosing $\Lambda\gg \Omega_0/\rho$ makes the background potential strain dominate $S_{\widetilde{\omega}}(0)$ while preserving $\mathcal{S}(0)=\delta\Lambda\,\Omega_0^2+O(\Omega_0^3/\rho)$. Finally, since $|\xi(y)-\xi(0)|\le (\varepsilon/\rho)|y_3|\le (\varepsilon/\rho)|y|$ for $|y|\le\rho$,
+\[
+  \int_{|y|\le\rho}\frac{|\xi(y)-\xi(0)|^2}{|y|^3}\,dy
+  \;\le\;\frac{\varepsilon^2}{\rho^2}\int_{|y|\le\rho}\frac{dy}{|y|}
+  \;=\;2\pi\,\varepsilon^2,
+\]
+which is arbitrarily small relative to $\delta\Lambda$ as $\Lambda\to\infty$.
+\end{proof}
+
+\section{Theorem B: Audit of the Biot--Savart Singular-Integral Closure}
+
+By the Biot--Savart law on $\mathbb{T}^3$, the strain tensor admits the principal-value representation
+\[
+  S_{ij}(x)=\frac{3}{8\pi}\operatorname{p.v.}\int_{\mathbb{T}^3}
+  \frac{(z_i\epsilon_{jkl}+z_j\epsilon_{ikl})z_k}{|z|^5}\,\omega_l(x-z)\,dz + R_{ij}(x),
+\]
+where $R(x)$ is a smooth periodization remainder. Contracting with $\xi_i(x)\xi_j(x)$ and using the geometric identity $(z\cdot\xi(x))(z\times\xi(x))\cdot\xi(x)=0$, the constant-direction part $\xi(y)=\xi(x)$ drops out of the principal-value integral, leaving
+\[
+  (S(x)\xi(x))\cdot\xi(x)
+  = \operatorname{p.v.}\int_{|x-y|\le\rho} K(x-y;\xi(x))\cdot\bigl(\xi(y)-\xi(x)\bigr)\,|\omega(y)|\,dy + \mathcal{R}_\rho(x),
+\]
+where $|K(z;\xi(x))|\le C_K\,|z|^{-3}$ and $|\mathcal{R}_\rho(x)|\le C_\rho\,\|\omega\|_{L^2}$.
+
+\begin{theorem}[Theorem B]\label{thm:B}
+Let $M=\sup_{|x-y|\le\rho}|\omega(y)|$. Without an \emph{a priori} Lipschitz bound on $\xi$, estimating the inner singular integral against the directional increment $|\xi(y)-\xi(x)|$ via Calder\'on--Zygmund / Cauchy--Schwarz bounds yields
+\begin{equation}\label{eq:CZ-sign}
+  \mathcal{S}(x)-\nu\,\mathcal{D}_\rho(x)
+  \;\le\;\bigl(C_*\;-\;\nu\bigr)\,\mathcal{D}_\rho(x) + C(\rho,\nu,M)\,\|\omega\|_{L^2}^2\,|\omega(x)|^2,
+\end{equation}
+where the leading coefficient from the singular integral is the positive quantity
+\[
+  C_* = C_{\mathrm{CZ}}\,M \;>\; 0,
+\]
+rather than a negative damping constant $-\gamma<0$.
+\end{theorem}
+
+\begin{proof}
+In the inner region $|x-y|\le\rho$, the kernel $K(x-y;\xi(x))$ has no definite sign around the unit sphere $z/|z|\in\mathbb{S}^2$ (indeed, its spherical average vanishes). Consequently, unless $\xi(y)-\xi(x)$ is already known to be controlled by a dissipative gradient term with coefficient exceeding $C_{\mathrm{CZ}}M$, bounding the inner integral by
+\[
+  |\omega(x)|^2\int_{|x-y|\le\rho}\frac{C_K\,|\omega(y)|\,|\xi(x)-\xi(y)|}{|x-y|^3}\,dy
+\]
+requires either a Lipschitz bound $|\xi(x)-\xi(y)|\le L|x-y|^\alpha$ (the Constantin--Fefferman hypothesis) or absorption into $\mathcal{D}_\rho(x)$, which contributes $+C_{\mathrm{CZ}}M\,\mathcal{D}_\rho(x)$ with a positive sign.
+\end{proof}
+
+\section{Remark on Uncutoff Two-Point Integrals on 2D Shear Flows}
+
+If the cutoff $|x-y|\le\rho$ is removed and $\mathcal{D}_\rho(x)$ is replaced by the global integral over $\mathbb{T}^3$, then on the stationary 2D shear flow $u(x_1,x_2,x_3)=(\sin x_2,0,0)$ with $\omega=(0,0,-\cos x_2)$, the stretching $\mathcal{S}(x)\equiv 0$ vanishes identically while $|\xi(x)-\xi(y)|=2$ whenever $\cos x_2$ and $\cos y_2$ have opposite signs. Thus the uncutoff two-point integral diverges logarithmically near the nodal surfaces $\cos x_2=0$ even for smooth stationary flows.
+
+\begin{thebibliography}{9}
+\bibitem{BKM84}
+J.~T. Beale, T.~Kato, and A.~Majda, \emph{Remarks on the breakdown of smooth solutions for the 3-D Euler equations}, Comm. Math. Phys. \textbf{94} (1984), 61--66.
+
+\bibitem{CF93}
+P.~Constantin and C.~Fefferman, \emph{Direction of vorticity and the problem of global regularity for the Navier--Stokes equations}, Indiana Univ. Math. J. \textbf{42} (1993), 775--789.
+
+\bibitem{Con94}
+P.~Constantin, \emph{Geometric statistics in turbulence}, SIAM Rev. \textbf{36} (1994), 73--98.
+\end{thebibliography}
+
+\end{document}

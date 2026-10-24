@@ -1,0 +1,34 @@
+{
+  "title": "On Local Two-Point Strain Coercivity in the 3D Vorticity Equation",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "publication_date": "2026-09-25",
+  "version": "1.0.0",
+  "creators": [
+    {
+      "name": "Frohman, Benjamin Stanley",
+      "orcid": "0009-0006-7068-3718",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "description": "Short self-contained note on a conjectured local two-point strain coercivity inequality for the 3D incompressible Navier–Stokes vorticity equation on T^3. Shows (Theorem A) that Conjecture (*)_rho fails as a kinematic identity for general smooth divergence-free fields on T^3 via intermediate-axis alignment with a slow spatial tilt toward the principal stretching direction, and (Theorem B) that after Biot–Savart and absorption without a priori Lipschitz control of the vorticity direction field xi = omega/|omega|, the resulting bound has leading coefficient C_* = C_CZ * M rather than a negative damping constant -gamma. Also shows that a global two-point coercivity bound without a short-range cutoff |x-y| <= rho fails on exact stationary 2D Navier–Stokes shear flows.",
+  "access_right": "open",
+  "license": "Apache-2.0",
+  "keywords": [
+    "Navier-Stokes",
+    "vorticity stretching",
+    "Constantin-Fefferman",
+    "two-point kernel",
+    "strain eigenvalues",
+    "Biot-Savart",
+    "counterexample"
+  ],
+  "notes": "MSC 2020: 35Q30 (Primary), 76D03, 76D05 (Secondary).",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/BenFrohman/two-point-strain-coercivity",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
