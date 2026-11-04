@@ -53,3 +53,8 @@ Zenodo DOI: [`10.5281/zenodo.23627618`](https://doi.org/10.5281/zenodo.23627618)
 ## Suggested citation
 
 Frohman, B. S. (2026). *Two-Point Strain Coercivity Is Not Free: The Intermediate-Axis Counterexample and the Calderón–Zygmund Remainder \(C_{\mathrm{CZ}}\|\omega\|_\infty\) for Unmodified Three-Dimensional Navier–Stokes*. Zenodo draft, 11 September 2026. https://github.com/BenFrohman/two-point-strain-coercivity
+
+## Zenodo archive
+
+- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23627617.svg)](https://doi.org/10.5281/zenodo.23627617) On Local Two-Point Strain Coercivity in the 3D Vorticity Equation — all versions: [10.5281/zenodo.23627617](https://doi.org/10.5281/zenodo.23627617); latest version: [10.5281/zenodo.23627618](https://doi.org/10.5281/zenodo.23627618)
+- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23867599.svg)](https://doi.org/10.5281/zenodo.23867599) On Local Two-Point Strain Coercivity in the 3D Vorticity Equation — all versions: [10.5281/zenodo.23867599](https://doi.org/10.5281/zenodo.23867599); latest version: [10.5281/zenodo.23867600](https://doi.org/10.5281/zenodo.23867600)
